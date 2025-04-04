@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-tripsmyplanner-dev-fea29-authRole",
-      "UnauthRoleArn": "arn:aws:iam::825765401912:role/amplify-tripsmyplanner-dev-fea29-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::825765401912:role/amplify-tripsmyplanner-dev-fea29-authRole",
+      "AuthRoleName": "amplify-tripsmyplanner-dev-c2aa6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::825765401912:role/amplify-tripsmyplanner-dev-c2aa6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::825765401912:role/amplify-tripsmyplanner-dev-c2aa6-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-tripsmyplanner-dev-fea29-deployment",
-      "UnauthRoleName": "amplify-tripsmyplanner-dev-fea29-unauthRole",
-      "StackName": "amplify-tripsmyplanner-dev-fea29",
-      "StackId": "arn:aws:cloudformation:us-east-1:825765401912:stack/amplify-tripsmyplanner-dev-fea29/46a941f0-110d-11f0-b419-123d4565c421",
-      "AmplifyAppId": "d1q9sts8vhdi6u"
+      "DeploymentBucketName": "amplify-tripsmyplanner-dev-c2aa6-deployment",
+      "UnauthRoleName": "amplify-tripsmyplanner-dev-c2aa6-unauthRole",
+      "StackName": "amplify-tripsmyplanner-dev-c2aa6",
+      "StackId": "arn:aws:cloudformation:us-east-1:825765401912:stack/amplify-tripsmyplanner-dev-c2aa6/436cb850-1180-11f0-a278-0affdc8be2f5",
+      "AmplifyAppId": "dtghheij20p0c"
     },
     "categories": {
       "auth": {
-        "tripsmyplanner99d820f2": {}
+        "tripsmyplanner171636ef": {}
       }
     }
   }
