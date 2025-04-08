@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:trips_my_planner/main.dart';
 import 'package:trips_my_planner/trips_planner_app.dart';
 
 void main() {

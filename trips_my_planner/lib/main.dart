@@ -1,16 +1,14 @@
 import 'package:amplify_api/amplify_api.dart';
+import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:flutter/material.dart';
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:trips_my_planner/trips_planner_app.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:trips_my_planner/models/ModelProvider.dart';
 
-
 import 'amplifyconfiguration.dart';
-import 'models/ModelProvider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,27 +26,36 @@ Future<void> main() async {
 }
 
 Future<void> _configureAmplify() async {
-  try {
-    // Add the necessary plugins
-    final authPlugin = AmplifyAuthCognito();
-    //final apiPlugin = AmplifyAPI(modelProvider: ModelProvider.instance);
+  // Add the necessary plugins
+  //final authPlugin = AmplifyAuthCognito();
+  //final apiPlugin = AmplifyAPI(modelProvider: ModelProvider.instance);
+  final modelProvider = ModelProvider();
 
-
-    await Amplify.addPlugins([authPlugin]);
-
-    // Configure Amplify
-    await Amplify.configure(amplifyconfig);
-
-    print('Amplify successfully configured');
-  } on AmplifyAlreadyConfiguredException catch (e) {
-    print('Amplify was already configured: $e');
-  } catch (e) {
-    print('An error occurred while configuring Amplify: $e');
-  }
+  await Amplify.addPlugins([
+    AmplifyAuthCognito(),
+    //modelProvider: ModelProvider.instance
+    AmplifyAPI(),
+    AmplifyStorageS3()
+  ]);
+  // Configure Amplify
+  await Amplify.configure(amplifyconfig);
 }
 
 
+
+
+  //   try {
+  //   print('Amplify successfully configured');
+  // } on AmplifyAlreadyConfiguredException catch (e) {
+  //   print('Amplify was already configured: $e');
+  // } catch (e) {
+  //   print('An error occurred while configuring Amplify: $e');
+  // }
+
+
+
 //old code (running)
+
 // Future<void> _configureAmplify() async {
 //   await Amplify.addPlugins([
 //     AmplifyAuthCognito(),
